@@ -1,0 +1,56 @@
+@import 'config';
+@import 'home';
+@import 'menu';
+@import 'about';
+@import 'projects';
+@import 'contact'; 
+@import 'responsive';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap');
+
+body {
+    height: 100vh;
+    font-family: 'Poppins';
+    color: set-text-color($primary-color);
+}
+
+a {
+    color: set-text-color($primary-color);
+    text-decoration: none;
+}
+
+header {
+    position: relative;
+    z-index: 2;
+}
+
+main {
+    @include transition-ease;
+    .social-icons {
+        height: fit-content;
+        position: fixed;
+        bottom: 0.5rem;
+        left: 2rem;
+    
+        a {
+            i {
+                font-size: 1.5rem;
+            }
+            color: set-text-color($primary-color);
+            padding: 0.4rem;
+            @include transition-ease;
+    
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+    footer {
+        height: fit-content;
+        position: fixed;
+        bottom: 0.5rem;
+        right: 2rem;
+        color: set-text-color($primary-color);
+    }
+}
+

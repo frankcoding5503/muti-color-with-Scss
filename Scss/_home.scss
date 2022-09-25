@@ -1,0 +1,83 @@
+.home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    @include Flex_Center(column);
+
+    &__hero {
+        width: 100%;
+        height: 100%;
+        
+        background:  linear-gradient(
+            to right,
+            rgba($primary-color, 0.7),
+            rgba($primary-color, 0.3),
+        ), url('/image/mountain.jpg') center ;
+        background-size: cover;
+
+        @include Flex_Center(column);
+
+        h1 {
+            font-size: 5rem;
+            letter-spacing: 0.6rem;
+            font-weight: 700;
+            color: set-text-color($primary-color);
+            border-bottom: 3px solid $grayishBlue;
+        }
+        h2 {
+            font-size: 1rem;
+            color: $grayishBlue;
+            font-weight: 200;
+
+            margin-bottom: 35vh;
+        }
+    }
+
+    &__shortintro {
+        width: 90%;
+        max-width: 1000px;
+        height: 25%;
+        padding: 1rem 2rem;
+
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 8px 5px 3px rgba($grayishBlue, 0.2);
+
+        position: absolute;
+        bottom: 4rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        overflow: hidden;
+
+        .shortintro-title {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+
+            & h1 {
+                font-size: 2rem;
+                font-weight: 300;
+
+                &:last-child {
+                    color: $secondary-color;
+                    font-weight: 400;
+                }
+            }  
+        }
+
+        .shortintro-intro {
+            & p {
+                height: 100%;
+                font-weight: 200;
+                padding-left: 3rem;
+                @include Flex_Center(column);
+            }
+        }
+    }
+}

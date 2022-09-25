@@ -1,0 +1,100 @@
+.about {
+    width: 100vw;
+    position: relative;
+    &__hero {
+        width: 100%;
+        height: 30vh;
+        
+        background:  linear-gradient(
+            to right,
+            rgba($primary-color, 0.7),
+            rgba($primary-color, 0.3),
+        ), url('/image/mountain.jpg') center ;
+        background-size: cover;
+
+        @include Flex_Center(column);
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 0.6rem;
+            font-weight: 400;
+            color: set-text-color($primary-color);
+            border-bottom: 2px solid $grayishBlue;
+        }
+        h2 {
+            font-size: 1rem;
+            color: $grayishBlue;
+            font-weight: 200;
+        }
+    }
+
+    &__timeline {
+        width: 100%;
+        padding: 2rem;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 1px;
+            height: 100%;
+            background-color: $grayishBlue;
+            position: absolute;
+            left: 0.5rem;
+        }
+
+        & .event {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 5rem;
+            
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 0 10px 2px $grayishBlue;
+            border-top: 3px solid $secondary-color;
+            background-color: rgba($primary-color, 0.2);
+            list-style-type: none;
+            
+            @include transition-ease;
+            
+            &__date {
+                font-size: 1rem;
+                font-weight: 200;
+                color: $grayishBlue;
+            }
+            &__title {
+                color: $secondary-color;
+                margin-bottom: 0.75rem;
+            }
+            p {
+                color: $grayishBlue;
+                font-weight: 300;
+            }
+            i {
+                display: none;
+            }
+            
+            &::before {
+                content: '';
+                width: 8px;
+                height: 8px;
+
+                border-radius: 50%;
+                background-color: $grayishBlue;
+                position: absolute;
+                left: 0.5rem;
+                transform: translateX(-3px);
+                @include transition-ease;
+            }
+        }
+    }
+
+    .social-icons {
+        position: absolute;
+        top: 26vh;
+        left: 1rem;
+    }
+    footer {
+        position: absolute;
+        top: 26vh;
+        right: 1rem;
+    }
+}
