@@ -86,7 +86,7 @@ body {
 .menu-btn {
   position: absolute;
   z-index: 1;
-  top: 0.5rem;
+  top: 1rem;
   right: 1rem;
   width: 25px;
   aspect-ratio: 1/1;
